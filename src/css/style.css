@@ -1,67 +1,63 @@
+/* Reset básico */
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Poetsen One", sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column;
-    background-image: url("../img/background.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button {
-    height: 2.5rem;
-    width: 15rem;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: rgb(255, 168, 168);
-    color: black;
-    border: 2px solid black;
-    border-radius: 6px;
-    transition: background-color 0.3s;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .container {
-    background-color: white;
-    flex-direction: column;
-    height: 80vh;
-    width: 40vw;
-    border: 2px solid rgb(182, 35, 35);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .you {
-    color: rgb(255, 0, 0);
+  color: #e91e63;
+  font-weight: 700;
 }
 
-/* Corações caindo */
-.heart {
-    position: fixed;
-    top: -20px;
-    font-size: 16px;
-    color: red;
-    animation: fall linear;
-    z-index: 9999;
-    pointer-events: none;
+button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #e91e63;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
 }
 
-@keyframes fall {
-    to {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-    }
+button:hover {
+  background: #c2185b;
 }
 
-/* Responsividade */
+strong {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 480px) {
   .container {
     max-width: 90%;
@@ -75,5 +71,27 @@ button {
   button {
     font-size: 1rem;
     padding: 10px 20px;
+  }
+}
+
+/* estilo dos corações animados */
+.heart {
+  position: fixed;
+  top: 100%;
+  animation-name: rise;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150vh);
+    opacity: 0;
   }
 }
