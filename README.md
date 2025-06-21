@@ -12,7 +12,7 @@ A beautiful and heartfelt one-page romantic website to celebrate love, featuring
 
 ## 🌐 Live Preview
 
-> You can host this project on GitHub Pages, Netlify, or Vercel and insert the link here.
+> paulolima4.github.io/Romantic-Website/
 
 ---
 
