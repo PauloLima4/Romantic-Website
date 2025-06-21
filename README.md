@@ -1,4 +1,4 @@
-# 💖 Romantic Website Project
+# 💖 Romantic Website
 
 A beautiful and heartfelt one-page romantic website to celebrate love, featuring:
 
