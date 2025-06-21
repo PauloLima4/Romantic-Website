@@ -1,0 +1,231 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff0f5;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.section {
+  position: relative;
+  background: white;
+  padding: 30px 20px;
+  margin-bottom: 40px;
+  border: 2px solid pink;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.section::before {
+  content: "❤️";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: pink;
+  color: white;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+/* Data em tempo real */
+#tempo .caixas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+#tempo strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.caixa {
+  background: #ffe6f0;
+  border: 2px solid #ffb6c1;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100px;
+  text-align: center;
+}
+
+.valor {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c2185b;
+}
+
+.label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Músicas */
+#musicas audio {
+  display: block;
+  margin: 10px auto;
+}
+
+#musicas {
+  padding: 40px 20px;
+  border: 2px solid #ffc0cb;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#musicas h2 {
+  font-size: 2rem;
+  color: #d6336c;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.musicas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.musica-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.musica-item audio {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.musica-item p {
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.musica-item img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 10px;
+  margin-top: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Album de fotos */
+#album .slideshow {
+  max-width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#album img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slideshow {
+  max-width: 220px;       /* largura fixa do container */
+  height: 220px;          /* altura fixa do container para deixar quadrado */
+  margin: 0 auto;         /* centraliza horizontalmente */
+  position: relative;
+  text-align: center;
+  overflow: hidden;       /* esconde qualquer coisa que saia da área */
+  border-radius: 12px;
+  background: #fff0f5;    /* cor de fundo leve */
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.slideshow img {
+  width: 100%;            /* ocupa toda a largura do container */
+  height: 100%;           /* ocupa toda a altura do container */
+  object-fit: contain;    /* mostra a imagem inteira sem cortar */
+  border-radius: 12px;
+  user-select: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.slideshow button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 105, 180, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.slideshow button:hover {
+  background: rgba(255, 105, 180, 0.8);
+}
+
+.slideshow #btnAnterior {
+  left: 5px;
+}
+
+.slideshow #btnProximo {
+  right: 5px;
+}
+
+#footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  border: 2px solid #ffc0cb;
+  font-size: 1rem;
+  color: #d6336c;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 0;
+}
+
+#footer p::before {
+  content: "💌 ";
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+  .caixa {
+    width: 80px;
+    padding: 10px;
+  }
+
+  .valor {
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  #album .slideshow {
+    max-width: 90%;
+  }
+}

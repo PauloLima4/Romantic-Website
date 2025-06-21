@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Secret</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Surpresinha pra <h1 class="you">You!</h1></h1><br><br><br><br>
+        <button onclick="window.location.href='./src/html/main.html'">Clique Aqui</button><br><br><br><br>
+        <strong>Pode confiar, você deve gostar, eu espero.</strong>
+    </div>
+
+    <script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerText = '❤️';
+
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 2 + Math.random() * 3 + 's';
+        heart.style.fontSize = (10 + Math.random() * 10) + 'px';
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+  }
+
+    setInterval(createHeart, 150);
+</script>
+</body>
+</html>

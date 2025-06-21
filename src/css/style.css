@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poetsen One", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background-image: url("../img/background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 2.5rem;
+    width: 15rem;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: rgb(255, 168, 168);
+    color: black;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.container {
+    background-color: white;
+    flex-direction: column;
+    height: 80vh;
+    width: 40vw;
+    border: 2px solid rgb(182, 35, 35);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.you {
+    color: rgb(255, 0, 0);
+}
+
+/* Corações caindo */
+.heart {
+    position: fixed;
+    top: -20px;
+    font-size: 16px;
+    color: red;
+    animation: fall linear;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+    }
+}
