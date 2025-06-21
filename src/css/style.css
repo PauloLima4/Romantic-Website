@@ -1,80 +1,75 @@
-/* Reset básico */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fff;
-  color: #333;
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: url('../img/background-hearts.jpg') no-repeat center center fixed;
+  background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
-  text-align: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  background: #f8f8f8;
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+  border: 2px solid rgba(255, 0, 0, 0.2);
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .you {
-  color: #e91e63;
-  font-weight: 700;
+  color: red;
+  font-weight: bold;
 }
 
 button {
   padding: 12px 24px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  background-color: pink;
+  border: 2px solid #a22;
+  border-radius: 10px;
   cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  background: #e91e63;
-  color: white;
-  transition: background-color 0.3s ease;
-  margin-bottom: 2rem;
+  margin: 20px 0;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: #c2185b;
+  background-color: #f88;
+  color: white;
 }
 
 strong {
+  display: block;
   font-size: 1rem;
-  color: #555;
+  color: #333;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade */
 @media (max-width: 480px) {
-  .container {
-    max-width: 90%;
-    padding: 15px;
-  }
-
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 10px 20px;
+  }
+
+  .container {
+    padding: 20px;
   }
 }
 
-/* estilo dos corações animados */
+/* Animação dos corações */
 .heart {
   position: fixed;
   top: 100%;
